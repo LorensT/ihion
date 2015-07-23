@@ -54,37 +54,11 @@
 	<div data-role="page" id="quotations"   >
 		<div data-role="header"  data-position="fixed" data-add-back-btn="true"  data-back-btn-text="back" data-back-btn-theme="a">
 			<h1><img src="img/book.png" ></h1>
-			<a href="#addPage" data-icon="plus"  data-transition="slide" class="ui-btn-right">Add</a>
+			<a href="#addData" data-icon="plus"  data-transition="slide" class="ui-btn-right">Add</a>
 		</div>
 		<div data-role="main" class="ui-content">
 			<h3>Quote List</h3>
-			<ul data-role="listview"   data-filter="true" data-filter-placeholder="Search quote..." data-inset="true" data-split-icon="forward"  data-divider-theme="b">
-				<li date-role="list-divider" >Favorite</li>
-				<li >
-					<a href="#popup" data-rel="popup" data-position-to="window">Lorem ipsum dolor.</a>
-					<a href="#popup2" data-rel="popup" data-position-to="window"></a>
-				</li>
-				<li >
-					<a href="#popup" data-rel="popup" data-position-to="window">Consectetur adipisicing.</a>
-					<a href="#popup2" data-rel="popup" data-position-to="window"></a>
-				</li>
-				<li >
-					<a href="#popup" data-rel="popup" data-position-to="window">Sit amet, consectetur.</a>
-					<a href="#popup2" data-rel="popup" data-position-to="window"></a>
-				</li>
-				<li date-role="list-divider" data->Today</li>
-				<li >
-					<a href="#popup" data-rel="popup" data-position-to="window">Lorem ipsum dolor.</a>
-					<a href="#popup2" data-rel="popup" data-position-to="window"></a>
-				</li>
-				<li >
-					<a href="#popup" data-rel="popup" data-position-to="window">Consectetur adipisicing.</a>
-					<a href="#popup2" data-rel="popup" data-position-to="window"></a>
-				</li>
-				<li >
-					<a href="#popup" data-rel="popup" data-position-to="window">Sit amet, consectetur.</a>
-					<a href="#popup2" data-rel="popup" data-position-to="window"></a>
-				</li>
+			<ul id="list" data-role="listview" data-filter-placeholder="Search quota..." data-inset="true" data-split-icon="forward">
 			</ul>
 		</div>
 		<div data-role="footer" data-id="main-menu" data-position="fixed">
@@ -96,20 +70,7 @@
 				</ul>
 			</div>
 		</div>
-		<!-- begin popup  -->
-			<div data-role="popup" id="popup" class="ui-content" >
-
-				<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left">Close</a>
-				<h4>About me</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus asperiores, et? Odio quam, tenetur? </p>
-				<ul data-role="listview" data-inset="true" >
-					<li date-role="list-divider" >Shared by</li>
-					<li data-icon="false"><a href="#"> <img src="img/fb.png" class="ui-li-icon"> Facebook </a></li>
-					<li data-icon="false"><a href="#"> <img src="img/tw.png" class="ui-li-icon">Tweeter </a></li>
-					<li data-icon="false"><a href="#"> <img src="img/vk.png" class="ui-li-icon"> Vk </a></li>
-				</ul>
-			</div>
-		<!-- end popup  -->
+		
     </div>
 <!-- end quotationPage -->
 
@@ -123,25 +84,29 @@
       		<div data-role="collapsible">
         		<h3>Author info</h3>
 	        	<div class="ui-grid-a">
-    	    		<div class="ui-block-a">Photo</div>
-        			<div class="ui-block-b">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas quidem, ratione. In pariatur porro saepe nemo non, facere deserunt, dignissimos reprehenderit tempore omnis atque nisi corporis, beatae rem, voluptas. Consequatur.</div>
+    	    		<div class="ui-block-a"> <img src="img/myphoto.jpg"></div>
+        			<div class="ui-block-b">Andrey Ivaschenko</div>
         		</div><!-- /grid-a -->
 	    	</div>
 		    <div data-role="collapsible-set">
 	        	<div data-role="collapsible" data-collapsed="false">
 	    	    	<h3>About App</h3>
-	        		<p>I'm the collapsible content. I'm hidden by default because I have the "collapsed" state; you need to expand the header to see me.</p>
+	        		<p>The app allows you to store notes or favorite quotes of famous writers</p>
 	        	</div>
 	          	<div data-role="collapsible" data-collapsed="true">
 	            	<h3>Manual</h3>
-	            	<p>I'm the collapsible content. I'm hidden by default because I have the "collapsed" state; you need to expand the header to see me.</p>
+	            	<p>Just save and read your favorite quotes. </p>
 	          	</div>
 	      	</div>
       		<h4> Feedback </h4>
-	      	<div data-role="controlgroup" data-type="horizontal">
-	        	<a href="#" data-role="button" data-theme="b" >Like</a>
-	        	<a href="#" data-role="button"  >Dislike</a>
-	      	</div>
+	      	
+	        	<ul data-role="listview" data-inset="true" >
+					<li date-role="list-divider" >Shared by</li>
+					<li data-icon="false"><a href="#"> <img src="img/fb.png" class="ui-li-icon"> Facebook </a></li>
+					<li data-icon="false"><a href="#"> <img src="img/tw.png" class="ui-li-icon">Tweeter </a></li>
+					<li data-icon="false"><a href="#"> <img src="img/vk.png" class="ui-li-icon"> Vk </a></li>
+				</ul>
+	      	
     	</div>
     	<div data-role="footer" data-id="main-menu" data-position="fixed">
       		<div data-role="navbar">
@@ -156,15 +121,15 @@
   	</div>
 <!-- end aboutPage -->
 
-<!-- begin addPage   -->
-	<div data-role="page" id="addPage"    datafullscreen="true">
-		<div data-role="header" data-position="fixed" data-add-back-btn="true"  data-back-btn-text="back" data-back-btn-theme="a" >
-			<h1>Add new Quote</h1>
+
+	<!-- begin add DataPage -->
+	<div data-role="page" id="addData"    datafullscreen="true" >
+		<div data-role="header" data-position="fixed" data-add-back-btn="true"  data-back-btn-text="back" data-back-btn-theme="a">
+			<h1>Add Quote ...</h1>
 		</div>
 
-		<div data-role="main" class="ui-content">
-			
-			<form action="" method="post" >
+		<div data-role="main" class="ui-content" >
+			<form action="#home" method="post" id="addForm">
 				
 				<label for="quote-title">Title:</label>
 				<input type="text" name="quote-title" id="quote-title" placeholder="Enter Title" value="">
@@ -175,68 +140,24 @@
 				<label for="quote-author">Author/Book:</label>
 				<input type="text" name="quote-author" id="quote-author" placeholder="Enter Author/Book" value="">
 			
-				<label for="quote-data">Data:</label>
-				<input  type="date" name="quote-data" id="quote-data" value="">
-				
-				<label for="rank-slider">Your Rank:</label>
-				<input type="range" name="rank-slider" id="rank-slider" value="50" min="0" max="100">
-
-				<label for="favorites">Save to favorites:</label>
-				<select name="favorites" id="favorites" data-role="slider" data-mini="true">
-					<option value="off">No</option>
-					<option value="on" selected="">Yes</option>
-				</select>
-				
-				<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
-					<legend> Favorites groups</legend>
-					<input type="checkbox" name="fav-home" id="fav-home">
-					<label for="fav-home" >h</label>
-					<input type="checkbox" name="fav-heart" id="fav-heart" checked="">
-					<label for="fav-heart" >m</label>
-					<input type="checkbox" name="fav-lock" id="fav-lock">
-					<label for="fav-lock" >l</label>
-					<input type="checkbox" name="fav-user" id="fav-user">
-					<label for="fav-user" >u</label>
-					<input type="checkbox" name="fav-video" id="fav-video">
-					<label for="fav-video" >v</label>
-				</fieldset>
-
-				
-				<label for="select-topic" class="select">Select quota topic:</label>
-				<select name="select-topic" id="select-topic">
-					<option value="sci-fi">Sci-fi</option>
-					<option value="darma">Drama</option>
-					<option value="scary">Scary</option>
-					<option value="action">Action</option>
-				</select>
-				
-				<fieldset data-role="controlgroup">
-					<legend>Your mood:</legend>
-					<input type="radio" name="mood" id="mood-exhausted" value="exhausted">
-					<label for="mood-exhausted">Exhausted</label>
-					<input type="radio" name="mood" id="mood-furious" value="furious">
-					<label for="mood-furious">Furious</label>
-					<input type="radio" name="mood" id="mood-relaxed" value="relaxed" checked="checked">
-					<label for="mood-relaxed">Relaxed</label>
-					<input type="radio" name="mood" id="mood-happy" value="happy">
-					<label for="mood-happy">Happy</label>
-				</fieldset>
-
 				<div data-role="controlgroup" data-type="horizontal">
 					<input type="submit" value="Submit" data-theme="b">
 					<input type="reset" value="Reset">
 				</div>
 			
 			</form>	
-
+			
 		</div>
 
-		<div data-role="footer"  data-id="main-menu" data-position="fixed">
-
+		<div data-role="footer"   data-position="fixed">
+			
 		</div>
+
 	</div>
- <!-- end addPage -->
-
+<!-- end homePage -->	
+<!--custom event code -->
+	<script src="js/plugin.js"></script>
+	<script src="js/main.js"></script>
 
 	
 </body>
