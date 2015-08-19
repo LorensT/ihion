@@ -3,6 +3,20 @@
   "version": "0.1.0",
   "dependencies": {
     "normalize.css": "~3.0.3",
-    "jquery": "~2.1.4"
-  }
+    "jquery": "~2.1.4",
+    "bpopup": "~0.11.0"
+  },
+  "homepage": "https://github.com/andrIvash/quote-me",
+  "authors": [
+    "andrIvash <andr.ivas12@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower",
+    "test",
+    "tests"
+  ]
 }
